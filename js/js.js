@@ -23,8 +23,8 @@ $(document).ready(function () {
          */
         fCheckRow = function (row) {
             var result = false;
-
-            if ((row[0] === row[1]) && (row[1] === row[2]) && (row.indexOf(null) === -1)) {
+            console.log(row);
+            if ((row[0] === row[1]) && (row[1] === row[2]) && (jQuery.inArray(null, row) === -1)) {
                 result = true;
             }
 
