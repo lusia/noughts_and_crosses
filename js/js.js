@@ -92,7 +92,7 @@ $(document).ready(function () {
             return results;
         };
 
-        $("span#hint").text("Move for 'o'");
+        $("span#hint").text("o" + " " + "move");
         $("table#game-field td").hover(function () {
                 $(this).addClass("hover");
             },
@@ -123,7 +123,7 @@ $(document).ready(function () {
             gr = _.findWhere(final, {result:true}); //gameResult
             if (gr !== undefined) {
                 $("table#game-field td").unbind("click");
-                $("#hint").text("Well done, " + currentMove + " won this game!");
+                $("#hint").text("Well done, '" + currentMove + "' wins this game!");
                 $("#info_block").css({width:"500px", height:"80px", "font-size":"20px", background:"pink"})
 
                 pos = gr.position;
@@ -154,7 +154,7 @@ $(document).ready(function () {
                     final, gr, pos;
 
                 $(this).addClass("cell").text(nextMove).unbind("click");
-                $("span#hint").text(currentMove + "move");
+                $("span#hint").text(currentMove + " " + "move");
                 changeActivePlayer();
                 steps++;
                 arr[row][col] = currentMove;
