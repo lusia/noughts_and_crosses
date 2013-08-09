@@ -92,7 +92,7 @@ $(document).ready(function () {
             return results;
         };
 
-        $("span#hint").text("o" + " " + "move");
+        $("span#hint").text("\'o\' move");
         $("table#game-field td").hover(function () {
                 $(this).addClass("hover");
             },
@@ -154,7 +154,7 @@ $(document).ready(function () {
                     final, gr, pos;
 
                 $(this).addClass("cell").text(nextMove).unbind("click");
-                $("span#hint").text(currentMove + " " + "move");
+                $("span#hint").text("\'" + currentMove + "\'"+ " move");
                 changeActivePlayer();
                 steps++;
                 arr[row][col] = currentMove;

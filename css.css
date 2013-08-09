@@ -19,12 +19,12 @@ body {
 div#content {
     margin: 0 auto;
     width: 800px;
+    position: relative;
 }
 
 table#game-field {
     width: 240px;
     height: 240px;
-    position: relative;
 }
 
 td {
@@ -47,6 +47,6 @@ div#info_block {
     width: 350px;
     position: absolute;
     top: 55px;
-    left: 575px;
+    left: 300px;
     background-color: #CCFFCC;
 }
